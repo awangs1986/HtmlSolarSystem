@@ -1,5 +1,17 @@
 # ORBIT — Solar System Explorer
 
+## 🧪 智能体能力测试 | Agent Capability Test
+
+> **中文**<br>
+> 这是一个智能体能力测试的题目，可以简单测试模型能力。使用一段提示词：<br>
+> **“给我绘制一个九大行星绕着太阳运行的 HTML 动画，需要可以旋转视角、可以缩放，而且每个星球都有自己的特征。”**
+>
+> **English**<br>
+> This is an agent capability test that offers a simple way to assess a model’s capabilities. Use this prompt:<br>
+> **“Create an HTML animation of the nine planets orbiting the Sun. It should let me rotate the view and zoom in or out, and each planet should have its own distinctive features.”**
+
+---
+
 ORBIT is a self-contained, interactive 3D tour of the Sun, the eight planets, and Pluto. It pairs an orbiting WebGL solar system with a calm, editorial-style explorer interface. Select a world to open its profile, then zoom in to study its surface, atmosphere, or rings.
 
 The page supports **English and Chinese**. Use the language button in the upper-right corner to switch the entire interface and planet information instantly.
@@ -22,7 +34,7 @@ It is **not** a standardized intelligence test, a scientific benchmark, or a mea
 
 ### Suggested test prompt
 
-> Create or improve an interactive solar system explorer. Show the planets with their own visual characteristics. Let people rotate and zoom the 3D view, select a planet to learn about it, and switch the whole interface between English and Chinese. Make the result polished, document how to use it, and include screenshots.
+> Create an HTML animation of the nine planets orbiting the Sun. It should let me rotate the view and zoom in or out, and each planet should have its own distinctive features.
 
 Give each model the same starting files and prompt. Score the result by inspecting the page and trying its controls; do not score prose claims alone.
 
