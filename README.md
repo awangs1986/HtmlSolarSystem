@@ -1,5 +1,9 @@
 # ORBIT — Solar System Explorer
 
+> **Project origin | 项目来源**<br>
+> This application was generated in a single pass by **Astra**.<br>
+> 本项目由 **Astra 一次性生成**。
+
 ## 🧪 智能体能力测试 | Agent Capability Test
 
 > **中文**<br>
@@ -57,14 +61,14 @@ Give each model the same starting files and prompt. Score the result by inspecti
 - **Camera controls:** drag to rotate, mouse wheel to zoom, pinch on touchscreens, and on-screen zoom and reset controls.
 - **Animation controls:** pause or resume the motion and adjust the simulation speed.
 - **One-click English/Chinese switch** for the interface, controls, labels, and planet profiles.
-- **Single-file delivery:** Three.js and the planet maps are embedded in `index.html`; the page makes no external requests when opened.
+- **Single-file delivery:** Three.js and the planet maps are embedded in `astra/index.html`; the page makes no external requests when opened.
 - Responsive layout for desktop and mobile screens.
 
 > Planet sizes, distances, orbital spacing, and simulation speed are visualized for clarity; they are not presented to scale. Pluto is included as a dwarf planet.
 
 ## Run it
 
-Open [`index.html`](index.html) in a current browser with WebGL enabled. No package installation, build step, or network connection is required. Hardware acceleration is recommended for smooth rendering.
+Open [`astra/index.html`](astra/index.html) in a current browser with WebGL enabled. The repository root redirects to this page for GitHub Pages. No package installation, build step, or network connection is required. Hardware acceleration is recommended for smooth rendering.
 
 ## Controls
 
