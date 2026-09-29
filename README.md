@@ -36,21 +36,35 @@ This project can serve as a small, informal test of an AI model’s ability to u
 
 It is **not** a standardized intelligence test, a scientific benchmark, or a measure of general IQ. Results depend on the prompt, the model’s tools, and the evaluator. Use it as a quick, qualitative way to compare how well models turn a short brief into a coherent working experience.
 
-### Suggested test prompt
+### Short-prompt baseline
 
 > Create an HTML animation of the nine planets orbiting the Sun. It should let me rotate the view and zoom in or out, and each planet should have its own distinctive features.
 
-Give each model the same starting files and prompt. Score the result by inspecting the page and trying its controls; do not score prose claims alone.
+Choose one prompt before the test. Give each agent the same prompt, starting files, tools, browser, and time limit. Open the delivered HTML and score only behavior you can verify. Award 0, 1, or 2 points in each category below.
 
-| Area | 0 points | 1 point | 2 points |
+| Prompt requirement | 0 points | 1 point | 2 points |
 | --- | --- | --- | --- |
-| Instruction following | Misses several requested parts | Delivers the main scene, with notable omissions | Delivers the scene, controls, bilingual content, documentation, and screenshots |
-| 3D scene | Scene is missing or broken | Scene renders, but planets or orbits are hard to distinguish | Solar system renders clearly, with distinct worlds and visible orbits |
-| Interaction | Rotation, zoom, or selection does not work | Some controls work, with rough or inconsistent behavior | Rotation, zoom, selection, and return-to-overview work reliably |
-| Planet details | Worlds look alike and have no useful information | Some worlds have distinct styling or basic facts | Worlds have recognizable visual traits and useful individual profiles |
-| Finish and delivery | Hard to run or understand | Runs with limited instructions | Polished layout, clear README, working language switch, and usable screenshots |
+| Nine worlds and the Sun | No usable solar-system scene | The Sun and some, but not all, of the nine worlds are visible | The Sun and all nine worlds are visible |
+| Orbital animation | No visible orbital motion | Some worlds orbit, or motion is clearly broken | All nine worlds visibly orbit the Sun |
+| Rotatable view | The view cannot be rotated | Rotation works but is difficult or unreliable | The user can rotate the view smoothly and predictably |
+| Zoom | The view cannot be zoomed | Zoom works but is difficult or unreliable | The user can zoom in and out smoothly and predictably |
+| Individual features | Worlds are visually interchangeable | Some worlds have recognizable, distinct features | Every world has its own recognizable visual characteristics |
 
-**Maximum: 10 points.** This is a practical project checklist, not a universal model ranking. Keep the model, prompt, starting state, and scoring conditions the same when comparing results.
+**Short-prompt score: 0–10 points.** Count Pluto as the ninth world for this historical wording; Pluto is classified as a dwarf planet today. Bilingual text, planet facts, and visual polish are welcome, but the short prompt does not request them, so they do not affect this score.
+
+### Detailed-prompt extension
+
+If you use the longer bilingual prompt at the top of this README, score the five core categories above **plus** these five categories. This yields a separate **0–20 point detailed-prompt score**; do not compare it directly with a short-prompt score.
+
+| Additional requirement | 0 points | 1 point | 2 points |
+| --- | --- | --- | --- |
+| Single-file WebGL delivery | No working WebGL page | WebGL works, but the page needs external files or a network connection | One HTML file contains all code and assets and works offline |
+| Requested scene details | No requested textures or scene details | Some requested details are recognizable | Detailed textures, axial rotation, Sun glow, starfield, asteroid belt, and all specifically named planetary features are present |
+| Interface and planet information | No usable planet navigation or information | Navigation, styling, or planet information is incomplete | Dark-and-gold observatory interface, bottom navigation, and descriptions plus all four requested facts for each world |
+| Exploration and playback controls | No requested extra controls work | Some controls work | Planet selection and close-up, overview return, pause/resume, speed, orbit lines, and labels all work |
+| Language, mobile, and scientific notes | None of these requirements are met | Some are met | Instant English/Chinese switch, usable mobile layout, and explicit scale and Pluto notes |
+
+A page that cannot render earns 0 in every category. Test controls directly; do not award points for claims in documentation or source code alone. Record category scores alongside the total so another reader can see where a result succeeded or fell short. These are practical task scores, not scientific measures of general intelligence.
 
 ## Features
 
@@ -86,7 +100,7 @@ Open [`astra/index.html`](astra/index.html) in a current browser with WebGL enab
 ## Implementation
 
 - HTML, CSS, and JavaScript in one page
-- [Three.js](https://threejs.org/), bundled in `index.html` (MIT License)
+- [Three.js](https://threejs.org/), bundled in `astra/index.html` (MIT License)
 - Planet texture maps from [Solar System Scope](https://www.solarsystemscope.com/textures/) (CC BY 4.0)
 
 The interface and simulation run locally. The source texture maps remain subject to their original attribution and license.
