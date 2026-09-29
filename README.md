@@ -8,11 +8,11 @@
 
 > **中文**<br>
 > 这是一个智能体能力测试的题目，可以简单测试模型能力。使用一段提示词：<br>
-> **“给我绘制一个九大行星绕着太阳运行的 HTML&WebGl 动画，需要可以旋转视角、可以缩放，而且每个星球都有自己的特征。”**
+> **“生成一个名为“ORBIT · 太阳系漫游”的单文件 HTML，内嵌全部代码和资源以支持离线运行，使用 Three.js/WebGL 展示太阳与九颗天体（水星至海王星及冥王星）的三维公转和自转，包含高清表面纹理、太阳辉光、星空、小行星带、地球大气与云层、木星条纹和大红斑、分层土星环、天王星倾斜自转及冥王星心形冰原，采用深色背景、暖金色点缀和简洁精致的天文观测界面，左侧显示行星介绍、直径、公转周期、平均日距与轴倾角，底部提供行星导航，支持拖拽旋转、滚轮及双指缩放、点击行星平滑进入近景、一键返回全景、暂停播放、速度调节、轨道与名称开关、中英文即时切换和移动端适配，并注明尺寸与轨道采用示意比例、冥王星属于矮行星。”**
 >
 > **English**<br>
 > This is an agent capability test that offers a simple way to assess a model’s capabilities. Use this prompt:<br>
-> **“Create an HTML&WebGl animation of the nine planets orbiting the Sun. It should let me rotate the view and zoom in or out, and each planet should have its own distinctive features.”**
+> **“Create a self-contained, offline-ready HTML file named “ORBIT · Solar System Explorer” with all code and assets embedded, using Three.js/WebGL to animate the orbits and axial rotation of the Sun’s nine worlds—Mercury through Neptune plus Pluto—with detailed surface textures, solar glow, a starfield, an asteroid belt, Earth’s atmosphere and clouds, Jupiter’s bands and Great Red Spot, layered Saturn rings, Uranus’s tilted rotation, and Pluto’s heart-shaped ice region; use a refined astronomical observatory interface with a dark background and warm gold accents, a left-hand panel showing each world’s description, diameter, orbital period, mean distance from the Sun, and axial tilt, plus bottom planet navigation; support drag-to-rotate, mouse-wheel and pinch zoom, smooth close-up transitions when selecting planets, one-click return to the overview, pause/resume, speed adjustment, orbit and label toggles, instant English/Chinese switching, and responsive mobile layouts, while noting that sizes and orbits are illustrative and Pluto is a dwarf planet.”**
 
 ---
 
