@@ -8,11 +8,11 @@
 
 > **中文**<br>
 > 这是一个智能体能力测试的题目，可以简单测试模型能力。使用一段提示词：<br>
-> **“给我绘制一个九大行星绕着太阳运行的 HTML 动画，需要可以旋转视角、可以缩放，而且每个星球都有自己的特征。”**
+> **“给我绘制一个九大行星绕着太阳运行的 HTML&WebGl 动画，需要可以旋转视角、可以缩放，而且每个星球都有自己的特征。”**
 >
 > **English**<br>
 > This is an agent capability test that offers a simple way to assess a model’s capabilities. Use this prompt:<br>
-> **“Create an HTML animation of the nine planets orbiting the Sun. It should let me rotate the view and zoom in or out, and each planet should have its own distinctive features.”**
+> **“Create an HTML&WebGl animation of the nine planets orbiting the Sun. It should let me rotate the view and zoom in or out, and each planet should have its own distinctive features.”**
 
 ---
 
