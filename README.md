@@ -8,11 +8,11 @@
 
 > **中文**<br>
 > 这是一个智能体能力测试的题目，可以简单测试模型能力。使用一段提示词：<br>
-> **“生成一个名为“ORBIT · 太阳系漫游”的单文件 HTML，内嵌全部代码和资源以支持离线运行，使用 Three.js/WebGL 展示太阳与九颗天体（水星至海王星及冥王星）的三维公转和自转，包含高清表面纹理、太阳辉光、星空、小行星带、地球大气与云层、木星条纹和大红斑、分层土星环、天王星倾斜自转及冥王星心形冰原，采用深色背景、暖金色点缀和简洁精致的天文观测界面，左侧显示行星介绍、直径、公转周期、平均日距与轴倾角，底部提供行星导航，支持拖拽旋转、滚轮及双指缩放、点击行星平滑进入近景、一键返回全景、暂停播放、速度调节、轨道与名称开关、中英文即时切换和移动端适配，并注明尺寸与轨道采用示意比例、冥王星属于矮行星。”**
+> **“只交付一个 `index.html` 页面文件，页面标题为“ORBIT · 太阳系漫游”；所有 CSS、JavaScript、字体、图片和纹理都内嵌在这个文件中，不依赖 CDN、外部资源请求或其他本地文件，双击即可离线运行。使用 Three.js/WebGL 展示太阳与九颗天体（水星至海王星及冥王星）的三维公转和自转，包含高清表面纹理、太阳辉光、星空、小行星带、地球大气与云层、木星条纹和大红斑、分层土星环、天王星倾斜自转及冥王星心形冰原，采用深色背景、暖金色点缀和简洁精致的天文观测界面，左侧显示行星介绍、直径、公转周期、平均日距与轴倾角，底部提供行星导航，支持拖拽旋转、滚轮及双指缩放、点击行星平滑进入近景、一键返回全景、暂停播放、速度调节、轨道与名称开关、中英文即时切换和移动端适配，并注明尺寸与轨道采用示意比例、冥王星属于矮行星。”**
 >
 > **English**<br>
 > This is an agent capability test that offers a simple way to assess a model’s capabilities. Use this prompt:<br>
-> **“Create a self-contained, offline-ready HTML file named “ORBIT · Solar System Explorer” with all code and assets embedded, using Three.js/WebGL to animate the orbits and axial rotation of the Sun’s nine worlds—Mercury through Neptune plus Pluto—with detailed surface textures, solar glow, a starfield, an asteroid belt, Earth’s atmosphere and clouds, Jupiter’s bands and Great Red Spot, layered Saturn rings, Uranus’s tilted rotation, and Pluto’s heart-shaped ice region; use a refined astronomical observatory interface with a dark background and warm gold accents, a left-hand panel showing each world’s description, diameter, orbital period, mean distance from the Sun, and axial tilt, plus bottom planet navigation; support drag-to-rotate, mouse-wheel and pinch zoom, smooth close-up transitions when selecting planets, one-click return to the overview, pause/resume, speed adjustment, orbit and label toggles, instant English/Chinese switching, and responsive mobile layouts, while noting that sizes and orbits are illustrative and Pluto is a dwarf planet.”**
+> **“Deliver exactly one HTML page file, `index.html`, titled “ORBIT · Solar System Explorer”. Embed all CSS, JavaScript, fonts, images, and textures in that file; use no CDN, external resource requests, or other local files, so it runs offline when opened directly. Use Three.js/WebGL to animate the orbits and axial rotation of the Sun’s nine worlds—Mercury through Neptune plus Pluto—with detailed surface textures, solar glow, a starfield, an asteroid belt, Earth’s atmosphere and clouds, Jupiter’s bands and Great Red Spot, layered Saturn rings, Uranus’s tilted rotation, and Pluto’s heart-shaped ice region; use a refined astronomical observatory interface with a dark background and warm gold accents, a left-hand panel showing each world’s description, diameter, orbital period, mean distance from the Sun, and axial tilt, plus bottom planet navigation; support drag-to-rotate, mouse-wheel and pinch zoom, smooth close-up transitions when selecting planets, one-click return to the overview, pause/resume, speed adjustment, orbit and label toggles, instant English/Chinese switching, and responsive mobile layouts, while noting that sizes and orbits are illustrative and Pluto is a dwarf planet.”**
 
 ---
 
@@ -38,9 +38,9 @@ It is **not** a standardized intelligence test, a scientific benchmark, or a mea
 
 ### Short-prompt baseline
 
-> Create an HTML animation of the nine planets orbiting the Sun. It should let me rotate the view and zoom in or out, and each planet should have its own distinctive features.
+> Create exactly one self-contained HTML page, `index.html`, showing the nine planets orbiting the Sun. Embed all code and assets in that file so it opens offline without external dependencies. Let me rotate the view and zoom in or out, and give each planet its own distinctive features.
 
-Choose one prompt before the test. Give each agent the same prompt, starting files, tools, browser, and time limit. Open the delivered HTML and score only behavior you can verify. Award 0, 1, or 2 points in each category below.
+Choose one prompt before the test. Give each agent the same prompt, starting files, tools, browser, and time limit. Open the delivered HTML and score only behavior you can verify. Award 0, 1, or 2 points in each of the six categories below.
 
 | Prompt requirement | 0 points | 1 point | 2 points |
 | --- | --- | --- | --- |
@@ -49,17 +49,17 @@ Choose one prompt before the test. Give each agent the same prompt, starting fil
 | Rotatable view | The view cannot be rotated | Rotation works but is difficult or unreliable | The user can rotate the view smoothly and predictably |
 | Zoom | The view cannot be zoomed | Zoom works but is difficult or unreliable | The user can zoom in and out smoothly and predictably |
 | Individual features | Worlds are visually interchangeable | Some worlds have recognizable, distinct features | Every world has its own recognizable visual characteristics |
+| Single HTML page | No usable HTML page | The page works but needs external files or a network connection | One HTML file contains all code and assets and works offline |
 
-**Short-prompt score: 0–10 points.** Count Pluto as the ninth world for this historical wording; Pluto is classified as a dwarf planet today. Bilingual text, planet facts, and visual polish are welcome, but the short prompt does not request them, so they do not affect this score.
+**Short-prompt score: 0–12 points.** Count Pluto as the ninth world for this historical wording; Pluto is classified as a dwarf planet today. Bilingual text, planet facts, and visual polish are welcome, but the short prompt does not request them, so they do not affect this score.
 
 ### Detailed-prompt extension
 
-If you use the longer bilingual prompt at the top of this README, score the five core categories above **plus** these five categories. This yields a separate **0–20 point detailed-prompt score**; do not compare it directly with a short-prompt score.
+If you use the longer bilingual prompt at the top of this README, score the six core categories above **plus** these four categories. This yields a separate **0–20 point detailed-prompt score**; do not compare it directly with a short-prompt score.
 
 | Additional requirement | 0 points | 1 point | 2 points |
 | --- | --- | --- | --- |
-| Single-file WebGL delivery | No working WebGL page | WebGL works, but the page needs external files or a network connection | One HTML file contains all code and assets and works offline |
-| Requested scene details | No requested textures or scene details | Some requested details are recognizable | Detailed textures, axial rotation, Sun glow, starfield, asteroid belt, and all specifically named planetary features are present |
+| Requested scene details | No working WebGL scene | Some requested details are recognizable | A WebGL scene has detailed textures, axial rotation, Sun glow, starfield, asteroid belt, and all specifically named planetary features |
 | Interface and planet information | No usable planet navigation or information | Navigation, styling, or planet information is incomplete | Dark-and-gold observatory interface, bottom navigation, and descriptions plus all four requested facts for each world |
 | Exploration and playback controls | No requested extra controls work | Some controls work | Planet selection and close-up, overview return, pause/resume, speed, orbit lines, and labels all work |
 | Language, mobile, and scientific notes | None of these requirements are met | Some are met | Instant English/Chinese switch, usable mobile layout, and explicit scale and Pluto notes |
